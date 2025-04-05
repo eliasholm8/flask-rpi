@@ -41,7 +41,7 @@ def run_code():
     # Do anything you want here: read files, run scripts, call functions, etc.
     # For demonstration, we’ll just log something to the console and respond with JSON.
     print("The server just ran some code locally!")
-    return jsonify({subprocess.check_output("nmcli dev wifi", shell=True, text=True)})
+    return jsonify({"status": subprocess.check_output("nmcli dev wifi", shell=True, text=True)})
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
