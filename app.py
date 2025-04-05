@@ -25,7 +25,7 @@ def index():
             })
             .then(response => response.json())
             .then(data => {
-                alert('Server response: ' + data.status);
+                alert(data.status);
             })
             .catch(error => console.error('Error:', error));
         }
